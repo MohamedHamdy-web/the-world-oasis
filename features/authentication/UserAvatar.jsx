@@ -23,6 +23,9 @@ const Avatar = styled.img`
 
 function UserAvatar() {
   const { user } = useUser();
+
+  if (!user) return null;
+
   const { fullName, avatar } = user.user_metadata;
 
   return (
